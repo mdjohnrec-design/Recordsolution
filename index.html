@@ -1,74 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RecordSolutions.org</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; }
-    header { background: #0b3d91; color: white; padding: 30px; text-align: center; }
-    nav { background: #062d6f; padding: 12px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 500; }
-    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-    .hero { text-align: center; }
-    .hero h2 { font-size: 32px; }
-    .btn { background: #0b3d91; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    footer { background: #0b3d91; color: white; text-align: center; padding: 20px; }
-    input, textarea { width: 100%; padding: 10px; margin: 8px 0; }
-    button { background: #0b3d91; color: white; padding: 10px 15px; border: none; }
+    :root{
+      --primary:#0b3d91;
+      --secondary:#0a2540;
+      --accent:#3fa9f5;
+      --bg:#f5f8fc;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:#111}
+    header{position:sticky;top:0;background:rgba(10,37,64,0.95);backdrop-filter:blur(10px);color:#fff;padding:15px 30px;z-index:1000}
+    nav{display:flex;justify-content:space-between;align-items:center}
+    nav a{color:#fff;text-decoration:none;margin:0 12px;font-weight:500}
+    .hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#0b3d91,#3fa9f5);color:#fff;padding:20px}
+    .hero h1{font-size:42px;margin-bottom:10px}
+    .hero p{font-size:18px;max-width:600px}
+    .btn{margin-top:20px;padding:12px 25px;background:#fff;color:#0b3d91;border-radius:30px;text-decoration:none;font-weight:600;transition:0.3s}
+    .btn:hover{background:#e0ecff}
+    section{padding:80px 20px;max-width:1100px;margin:auto}
+    h2{text-align:center;margin-bottom:40px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+    .card{background:#fff;border-radius:15px;padding:25px;box-shadow:0 10px 25px rgba(0,0,0,0.08);transition:transform 0.3s}
+    .card:hover{transform:translateY(-8px)}
+    .badge{display:inline-block;padding:5px 10px;border-radius:20px;background:#e0ecff;color:#0b3d91;font-size:12px;margin-bottom:10px}
+    .stats{display:flex;justify-content:space-around;text-align:center}
+    .stats div{font-size:22px;font-weight:700}
+    footer{background:var(--secondary);color:#fff;text-align:center;padding:30px}
+    form input,form textarea{width:100%;padding:12px;margin:8px 0;border-radius:6px;border:1px solid #ccc}
+    form button{background:var(--primary);color:#fff;border:none;padding:12px 20px;border-radius:6px}
+    .fade{opacity:0;transform:translateY(30px);transition:1s}
+    .fade.show{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
 
 <header>
-  <h1>RecordSolutions.org</h1>
-  <p>HIPAA-Compliant Medical Records Retrieval</p>
+  <nav>
+    <h3>RecordSolutions.org</h3>
+    <div>
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 </header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#services">Services</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-
 <section class="hero">
-  <h2>Secure & Fast Medical Records Retrieval</h2>
-  <p>HIPAA-compliant solutions for legal, insurance, and healthcare industries</p>
-  <a href="#contact" class="btn">Get Started</a>
+  <h1>Enterprise Medical Records Retrieval</h1>
+  <p>Fast, Secure, HIPAA-Compliant solutions trusted by legal, insurance & healthcare professionals</p>
+  <a href="#contact" class="btn">Request Records</a>
 </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card"><h3>Medical Records Retrieval</h3><p>Fast and secure record collection.</p></div>
-    <div class="card"><h3>Record Review</h3><p>Accurate summarization services.</p></div>
-    <div class="card"><h3>Data Entry</h3><p>Efficient and error-free data processing.</p></div>
-    <div class="card"><h3>Document Management</h3><p>Secure organization of records.</p></div>
+<section class="fade">
+  <div class="stats">
+    <div>99% Accuracy</div>
+    <div>24-48h Turnaround</div>
+    <div>100% Secure</div>
   </div>
 </section>
 
-<section id="about">
+<section id="services" class="fade">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card"><span class="badge">Core</span><h3>Medical Records Retrieval</h3><p>Fast, compliant retrieval services.</p></div>
+    <div class="card"><span class="badge">Analysis</span><h3>Record Review</h3><p>Accurate summarization.</p></div>
+    <div class="card"><span class="badge">Data</span><h3>Data Entry</h3><p>Error-free processing.</p></div>
+    <div class="card"><span class="badge">Secure</span><h3>Document Management</h3><p>Encrypted record handling.</p></div>
+  </div>
+</section>
+
+<section id="about" class="fade">
   <h2>About Us</h2>
-  <p>RecordSolutions.org provides secure, HIPAA-compliant medical records retrieval services aligned with industry leaders. We ensure encrypted handling of PHI, trained staff, and full audit trails.</p>
+  <p>RecordSolutions.org is a premium provider of HIPAA-compliant medical records retrieval. We align with industry leaders and deliver secure, accurate, and fast services with full audit trails and certified staff.</p>
 </section>
 
-<section>
+<section class="fade">
   <h2>Security & Compliance</h2>
-  <ul>
-    <li>HIPAA-compliant processes</li>
-    <li>Encrypted portals</li>
-    <li>Certified staff</li>
-    <li>Audit trails for PHI protection</li>
-  </ul>
+  <div class="grid">
+    <div class="card"><h3>HIPAA Compliant</h3><p>Strict regulatory adherence.</p></div>
+    <div class="card"><h3>Encrypted Systems</h3><p>Secure data transfer & storage.</p></div>
+    <div class="card"><h3>Audit Trails</h3><p>Full tracking & transparency.</p></div>
+  </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="fade">
   <h2>Contact Us</h2>
-  <form onsubmit="alert('Message sent!'); return false;">
+  <form onsubmit="alert('Message sent successfully');return false;">
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Your Email" required>
     <textarea placeholder="Your Message" required></textarea>
@@ -78,8 +101,20 @@
 </section>
 
 <footer>
-  <p>© 2026 RecordSolutions.org</p>
+  <p>© 2026 RecordSolutions.org | Premium Medical Records Services</p>
 </footer>
+
+<script>
+  const faders = document.querySelectorAll('.fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  });
+  faders.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
