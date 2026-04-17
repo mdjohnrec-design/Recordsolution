@@ -3,69 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RecordSolutions</title>
+  <title>RecordSolutions.org</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
-    nav { background: #34495e; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; }
-    section { padding: 40px; }
-    .hero { background: #ecf0f1; text-align: center; }
-    .services { display: flex; gap: 20px; flex-wrap: wrap; }
-    .card { background: #f9f9f9; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px; }
-    footer { background: #2c3e50; color: white; text-align: center; padding: 15px; }
+    body { font-family: 'Inter', sans-serif; margin: 0; }
+    header { background: #0b3d91; color: white; padding: 30px; text-align: center; }
+    nav { background: #062d6f; padding: 12px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 500; }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .hero { text-align: center; }
+    .hero h2 { font-size: 32px; }
+    .btn { background: #0b3d91; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    footer { background: #0b3d91; color: white; text-align: center; padding: 20px; }
+    input, textarea { width: 100%; padding: 10px; margin: 8px 0; }
+    button { background: #0b3d91; color: white; padding: 10px 15px; border: none; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>RecordSolutions</h1>
-  <p>Your Trusted Partner for Data & Record Management</p>
+  <h1>RecordSolutions.org</h1>
+  <p>HIPAA-Compliant Medical Records Retrieval</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
+  <a href="#">Home</a>
   <a href="#services">Services</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="home" class="hero">
-  <h2>Welcome to RecordSolutions</h2>
-  <p>We help businesses manage, organize, and process records efficiently.</p>
+<section class="hero">
+  <h2>Secure & Fast Medical Records Retrieval</h2>
+  <p>HIPAA-compliant solutions for legal, insurance, and healthcare industries</p>
+  <a href="#contact" class="btn">Get Started</a>
 </section>
 
 <section id="services">
   <h2>Our Services</h2>
   <div class="services">
-    <div class="card">
-      <h3>Data Entry</h3>
-      <p>Accurate and fast data entry services.</p>
-    </div>
-    <div class="card">
-      <h3>Medical Records</h3>
-      <p>Professional medical record summarization and review.</p>
-    </div>
-    <div class="card">
-      <h3>Document Management</h3>
-      <p>Secure organization of your business documents.</p>
-    </div>
+    <div class="card"><h3>Medical Records Retrieval</h3><p>Fast and secure record collection.</p></div>
+    <div class="card"><h3>Record Review</h3><p>Accurate summarization services.</p></div>
+    <div class="card"><h3>Data Entry</h3><p>Efficient and error-free data processing.</p></div>
+    <div class="card"><h3>Document Management</h3><p>Secure organization of records.</p></div>
   </div>
 </section>
 
 <section id="about">
   <h2>About Us</h2>
-  <p>RecordSolutions is dedicated to providing high-quality record management and data processing services to businesses worldwide.</p>
+  <p>RecordSolutions.org provides secure, HIPAA-compliant medical records retrieval services aligned with industry leaders. We ensure encrypted handling of PHI, trained staff, and full audit trails.</p>
+</section>
+
+<section>
+  <h2>Security & Compliance</h2>
+  <ul>
+    <li>HIPAA-compliant processes</li>
+    <li>Encrypted portals</li>
+    <li>Certified staff</li>
+    <li>Audit trails for PHI protection</li>
+  </ul>
 </section>
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Email: info@recordsolutions.com</p>
-  <p>Phone: +1 234 567 890</p>
+  <form onsubmit="alert('Message sent!'); return false;">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p>Email: Info@recordssolutions.com</p>
 </section>
 
 <footer>
-  <p>© 2026 RecordSolutions. All rights reserved.</p>
+  <p>© 2026 RecordSolutions.org</p>
 </footer>
 
 </body>
